@@ -10,7 +10,7 @@ function authMiddleware(req, res, next) {
     const token = authHeader.split(" ")[1];
 
     try {
-        const decoded = jwt.verify(token, process.env.MY_SECRET_KEY);
+        const decoded = jwt.verify(token, process.env.my_secret_key);
 
         if (!decoded || !decoded.userId) {
             return res.status(401).json({ msg: "Invalid token structure" });
