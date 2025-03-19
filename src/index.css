@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@plugin "daisyui";
+:root {
+    --spacing: 4px; /* Example value, adjust as needed */
+  }
+  
+  .bottom-4 {
+    bottom: calc(var(--spacing) * -22);
+  }
+  .back{
+    bottom: calc(var(--spacing) * 4);
+    width: 35px;
+    
+  }
+  
+.w-full{
+width: 100%;
+height: 30%;
+}

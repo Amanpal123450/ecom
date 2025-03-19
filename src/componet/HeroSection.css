@@ -1,0 +1,26 @@
+/* import iphone15 from "./iphone15.webp" */
+
+.sizee{
+
+    height: 250px;
+    width: 100%;
+}
+ .imgg1{
+      
+    position: relative;
+    bottom: 210px;
+    left: 820px;
+    height: 170px;
+    
+ }
+ .sett{
+    height: 300px;
+ }
+ .imgg2{
+
+    position: absolute;
+    bottom: 90px;
+    left: 450px;
+    height: 170px;
+
+ }
