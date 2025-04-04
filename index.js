@@ -6,6 +6,7 @@ const Product=require("./routes/product");
 const cart=require("./routes/cart");
 const wishlist=require("./routes/wishList");
 const contact=require("./routes/contact")
+const order=require("./routes/order");
 mongoose.connect(
   "mongodb+srv://amanpal6000:Jt6nnrKck2pJy5EH@cluster0.l7has.mongodb.net/?retryWrites=true"
 ).then(() => {
@@ -23,6 +24,7 @@ mongoose.connect(
   app.use("/cart",cart);
   app.use("/wistlist",wishlist);
   app.use("/contact",contact);
+  app.use("/order",order);
   app.use("/uploads", express.static("uploads"));
 
 

@@ -16,7 +16,7 @@ async function addCart(req, res) {
         console.log("Product ID:", productId, "Quantity:", quantity);
 
         const product = await Product.findById(productId);
-        if (!product) {
+         if (!product) {
           
             return res.status(404).json({ msg: "Product not found" });
         }
@@ -59,10 +59,7 @@ async function getCart(req, res) {
             return res.status(400).json({ msg: "User ID is required" });
         }
 
-        const cart = await Cart.findOne({ userId }).populate({
-            path: "item.productId",
-            // select: "name price image", // Include required fields
-        });
+        const cart = await Cart.findOne({ userId }).populate("item.productId");
 
         if (!cart) {
             return res.status(404).json({ msg: "Cart not found" });
