@@ -14,7 +14,7 @@ route.post("/profile",upload.single('image'), UploadFile);
 route.get("/get/uploads/:filename",GetImage);
 route.put("/updatesettings",authMiddleware,updateUserData);
 route.post("/checkpass",authMiddleware,OldPassCheck);
-route.post("/generateOTP",authMiddleware,generateOTP);
+route.post("/generateOTP", generateOTP);
 route.post("/otpverify",authMiddleware,verifyotp);
 
 

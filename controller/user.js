@@ -143,8 +143,8 @@ async function generateOTP(req,res) {
     try {
             
         const { email } = req.body;
-        const {userId}=req.user;
-        const user = await User.findOne({ _id:userId});
+ 
+        const user = await User.findOne({email});
     
         if (!user) return res.status(404).json({ msg: "User not found" });
     
