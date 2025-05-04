@@ -49,11 +49,11 @@ try {
 async function getProductById(req,res) {
 
     try {
-        const { userId } = req.user;
-        if (!userId) {
+        // const { userId } = req.user;
+        // if (!userId) {
            
-         res.status(400).json({ msg: "User ID not found in token" });
-        }
+        //  res.status(400).json({ msg: "User ID not found in token" });
+        // }
 
         const {id}=req.params;
 
@@ -66,7 +66,7 @@ async function getProductById(req,res) {
         
     } catch (error) {
         
-        return res.status(400).json({msg:"erroe",error})
+        return res.status(400).json({msg:"erroe hai =",error})
     }
 }
 

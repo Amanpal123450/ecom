@@ -186,9 +186,8 @@ async function generateOTP(req,res) {
 async function verifyotp(req,res) {
     
     try {
-        const { otp } = req.body;
-        const {userId}=req.user;
-        const user = await User.findOne({ _id:userId });
+        const { otp ,email} = req.body;
+        const user = await User.findOne({email});
     
         if (!user || user.otp !== otp || Date.now() > user.otpExpires) {
           return res.status(400).json({ msg: "Invalid or expired OTP" });
