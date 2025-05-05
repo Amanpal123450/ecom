@@ -9,7 +9,7 @@ route.post("/login",UserLogin);
 route.post("/signup",UserSignup);
 route.get("/getdata",authMiddleware,GetData);
 route.post("/forget_pass",forgetPassword);
-route.post("/reset_pass",authMiddleware,resetPass);
+route.post("/reset_pass",resetPass);
 route.post("/profile",upload.single('image'), UploadFile);
 route.get("/get/uploads/:filename",GetImage);
 route.put("/updatesettings",authMiddleware,updateUserData);

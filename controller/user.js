@@ -186,7 +186,7 @@ async function generateOTP(req,res) {
 async function verifyotp(req,res) {
     
     try {
-        const { otp ,email} = req.body;
+        const {otp,email} = req.body;
         const user = await User.findOne({email});
     
         if (!user || user.otp !== otp || Date.now() > user.otpExpires) {
