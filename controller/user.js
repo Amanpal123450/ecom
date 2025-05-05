@@ -204,13 +204,13 @@ async function resetPass(req,res) {
     try {
 
     const {userId}=req.user;
-    const {password}=req.body;
+    const {password,email}=req.body;
 
     if (!password) return res.status(400).json({msg:"password not found"});
 
     // const decode = jwt.verify(userId,process.env.my_secret_key);
 
-    const checkUser = await User.findById({_id:userId});
+    const checkUser = await User.findById({email});
     if (!checkUser) return res.status(400).json({msg:"user not found"});
 
      const NewhasPassword=await bcrypt.hash(password,10);
